@@ -156,7 +156,7 @@ public class FrameFiabilidad extends JFrame {
 
 		PrintWriter out = null;
 		try {// Guardar Resultados de la ventana
-			out = new PrintWriter(new BufferedWriter(new FileWriter("Entrada.in", true)));
+			out = new PrintWriter(new BufferedWriter(new FileWriter("Repuesta De Usuario.in", true)));
 			out.println(resultadoTole);
 			out.println(resultadoCapacidad);
 		} catch (IOException e) {

@@ -155,7 +155,7 @@ public class FrameMantenibilidad extends JFrame {
 
 		PrintWriter out = null;
 		try {// Guardar Resultados de la ventana
-			out = new PrintWriter(new BufferedWriter(new FileWriter("Entrada.in", true)));
+			out = new PrintWriter(new BufferedWriter(new FileWriter("Repuesta De Usuario.in", true)));
 			out.println(resulCapAnali);
 			out.println(resulCapCambi);
 		} catch (IOException e) {

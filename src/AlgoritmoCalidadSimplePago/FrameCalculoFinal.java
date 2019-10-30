@@ -197,7 +197,7 @@ public class FrameCalculoFinal extends JFrame {
 		/*** Lectura de los valores ingresados */
 		Scanner in = null;
 		try {// Guardar Resultados de la ventana
-			in = new Scanner(new File("Entrada.in"));
+			in = new Scanner(new File("Repuesta De Usuario.in"));
 		} catch (IOException e) {
 			System.out.println(e);
 		}

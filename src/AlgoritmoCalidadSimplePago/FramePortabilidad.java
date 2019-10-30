@@ -153,7 +153,7 @@ public class FramePortabilidad extends JFrame {
 
 		PrintWriter out = null;
 		try {// Guardar Resultados de la ventana
-			out = new PrintWriter(new BufferedWriter(new FileWriter("Entrada.in", true)));
+			out = new PrintWriter(new BufferedWriter(new FileWriter("Repuesta De Usuario.in", true)));
 			out.println(resulAdap);
 			out.println(resulInta);
 		} catch (IOException e) {

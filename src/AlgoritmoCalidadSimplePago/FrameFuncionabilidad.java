@@ -139,7 +139,7 @@ public class FrameFuncionabilidad extends JFrame {
 		ExactitudBox.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				   
-				System.out.println(ExactitudBox.getSelectedIndex());
+				//System.out.println(ExactitudBox.getSelectedIndex());
 				   
 				  switch(ExactitudBox.getSelectedIndex()) {
 		            case 0: 
@@ -172,8 +172,8 @@ public class FrameFuncionabilidad extends JFrame {
 	private void botonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botonSiguienteActionPerformed
 
 		PrintWriter out = null;
-		try {// Guardar Resultados de la ventana
-			out = new PrintWriter(new File("Entrada.in"));
+		try {// Guardar Resultados de la ventana Piso el archivo existente
+			out = new PrintWriter(new File("Repuesta De Usuario.in"));
 			out.println(resultadoSeg);
 			out.println(resultadoExac);
 		} catch (IOException e) {

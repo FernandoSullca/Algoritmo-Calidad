@@ -28,6 +28,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextPane;
+import javax.swing.ImageIcon;
+import javax.swing.JTable;
 
 public class FrameCalculoFinal extends JFrame {
 
@@ -83,31 +85,38 @@ public class FrameCalculoFinal extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lblFuncionabilidad = new JLabel("Funcionabilidad");
-		lblFuncionabilidad.setBounds(20, 50, 152, 14);
+		lblFuncionabilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblFuncionabilidad.setBounds(20, 65, 152, 20);
 		contentPane.add(lblFuncionabilidad);
 
 		JLabel lblEficiencia = new JLabel("Eficiencia");
-		lblEficiencia.setBounds(20, 80, 152, 14);
+		lblEficiencia.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblEficiencia.setBounds(20, 95, 152, 20);
 		contentPane.add(lblEficiencia);
 
 		JLabel lblFiabilidad = new JLabel("Fiabilidad");
-		lblFiabilidad.setBounds(20, 110, 152, 14);
+		lblFiabilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblFiabilidad.setBounds(20, 125, 152, 20);
 		contentPane.add(lblFiabilidad);
 
 		JLabel lblMantenibilidad = new JLabel("Mantenibilidad");
-		lblMantenibilidad.setBounds(20, 140, 152, 14);
+		lblMantenibilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblMantenibilidad.setBounds(20, 155, 152, 20);
 		contentPane.add(lblMantenibilidad);
 
 		JLabel lblUsabilidad = new JLabel("Usabilidad");
-		lblUsabilidad.setBounds(20, 170, 152, 14);
+		lblUsabilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblUsabilidad.setBounds(20, 185, 152, 20);
 		contentPane.add(lblUsabilidad);
 
 		JLabel lblProtabilidad = new JLabel("Protabilidad");
-		lblProtabilidad.setBounds(20, 200, 152, 14);
+		lblProtabilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblProtabilidad.setBounds(20, 215, 152, 20);
 		contentPane.add(lblProtabilidad);
 
 		JLabel lblToalPromedioPonderado = new JLabel("Toal Promedio Ponderado.");
-		lblToalPromedioPonderado.setBounds(20, 230, 152, 14);
+		lblToalPromedioPonderado.setFont(new Font("Tahoma", Font.BOLD, 11));
+		lblToalPromedioPonderado.setBounds(20, 245, 152, 20);
 		contentPane.add(lblToalPromedioPonderado);
 
 		JLabel lblAnalisisFinal = new JLabel("Analisis Final");
@@ -116,38 +125,44 @@ public class FrameCalculoFinal extends JFrame {
 		contentPane.add(lblAnalisisFinal);
 
 		textField = new JTextField();
+		textField.setFont(new Font("Tahoma", Font.BOLD, 11));
 		textField.setEditable(false);
-		textField.setBounds(200, 50, 42, 20);
+		textField.setBounds(200, 62, 42, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 
 		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Tahoma", Font.BOLD, 11));
 		textField_1.setEditable(false);
-		textField_1.setBounds(200, 80, 42, 20);
+		textField_1.setBounds(200, 92, 42, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 
 		textField_2 = new JTextField();
+		textField_2.setFont(new Font("Tahoma", Font.BOLD, 11));
 		textField_2.setEditable(false);
-		textField_2.setBounds(200, 110, 42, 20);
+		textField_2.setBounds(200, 122, 42, 20);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 
 		textField_3 = new JTextField();
+		textField_3.setFont(new Font("Tahoma", Font.BOLD, 11));
 		textField_3.setEditable(false);
-		textField_3.setBounds(200, 140, 42, 20);
+		textField_3.setBounds(200, 152, 42, 20);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
 
 		textField_4 = new JTextField();
+		textField_4.setFont(new Font("Tahoma", Font.BOLD, 11));
 		textField_4.setEditable(false);
-		textField_4.setBounds(200, 170, 42, 20);
+		textField_4.setBounds(200, 182, 42, 20);
 		contentPane.add(textField_4);
 		textField_4.setColumns(10);
 
 		textField_5 = new JTextField();
+		textField_5.setFont(new Font("Tahoma", Font.BOLD, 11));
 		textField_5.setEditable(false);
-		textField_5.setBounds(200, 200, 42, 20);
+		textField_5.setBounds(200, 212, 42, 20);
 		contentPane.add(textField_5);
 		textField_5.setColumns(10);
 
@@ -156,8 +171,9 @@ public class FrameCalculoFinal extends JFrame {
 		contentPane.add(separator);
 
 		textFieldPromedio = new JTextField();
+		textFieldPromedio.setFont(new Font("Tahoma", Font.BOLD, 11));
 		textFieldPromedio.setEditable(false);
-		textFieldPromedio.setBounds(200, 230, 42, 20);
+		textFieldPromedio.setBounds(200, 242, 42, 20);
 		contentPane.add(textFieldPromedio);
 		textFieldPromedio.setColumns(10);
 
@@ -167,16 +183,24 @@ public class FrameCalculoFinal extends JFrame {
 				System.exit(0);
 			}
 		});
-		btnSali.setBounds(318, 196, 191, 23);
+		btnSali.setBounds(330, 226, 191, 23);
 		contentPane.add(btnSali);
 
 		JTextPane textPane = new JTextPane();
-		textPane.setBounds(335, 80, 152, 80);
+		textPane.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		textPane.setBounds(335, 80, 174, 94);
 		contentPane.add(textPane);
+		
+		JLabel lblNewLabel = new JLabel("New label");
+		lblNewLabel.setIcon(new ImageIcon(FrameCalculoFinal.class.getResource("/resurso/bg.jpg")));
+		lblNewLabel.setBounds(0, 0, 590, 361);
+		contentPane.add(lblNewLabel);
 		inciciarCalculo();
 		
 		if(error_de_entrada_requisitos_minimos())
-			textPane.setText("El nivel de calidad es: \nNO Satisfactorio\n\"NO Cumple con el minimo aceptable\"");
+			textPane.setText("El nivel de calidad es: \n"
+					+ "NO Satisfactorio\n"
+					+ "NO Cumple con el minimo aceptable");
 		else 
 			{if(PromedioTotal<Minimo_aceptable)
 			textPane.setText("El nivel de calidad es: \nNO Satisfactorio\n");
@@ -247,5 +271,4 @@ public class FrameCalculoFinal extends JFrame {
 				}
 				return error;
 	}
-
 }

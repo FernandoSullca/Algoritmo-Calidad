@@ -20,6 +20,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 
 public class FrameEficiencia extends JFrame {
 
@@ -49,22 +50,21 @@ public class FrameEficiencia extends JFrame {
 	 */
 	public FrameEficiencia() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 400);
+		setBounds(100, 100, 606, 444);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple págo");
 		setContentPane(contentPane);
 		setLocationRelativeTo(null);
 		contentPane.setLayout(null);
-	
-		
+
 		JButton btnNewButtonSiguiente = new JButton("Siguiente");
 		btnNewButtonSiguiente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				 botonSiguienteActionPerformed(e);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(483, 327, 97, 23);
+		btnNewButtonSiguiente.setBounds(483, 371, 97, 23);
 		contentPane.add(btnNewButtonSiguiente);
 		
 		JSeparator separator = new JSeparator();
@@ -75,18 +75,18 @@ public class FrameEficiencia extends JFrame {
 		txtpnDescripcinSeEvaluar.setText("\u25CF  Subcaracter\u00EDstica: Utilizaci\u00F3n de recursos\r\nDescripci\u00F3n:\tSe evaluar\u00E1 la eficiencia del producto software de acuerdo al porcentaje de uso de procesador que realice.\r\n\r\nCaracter\u00EDsticas a medir\r\n\u2022\" N% \" de uso de procesador\r\n");
 		txtpnDescripcinSeEvaluar.setEditable(false);
 		txtpnDescripcinSeEvaluar.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinSeEvaluar.setBounds(15, 31, 301, 109);
+		txtpnDescripcinSeEvaluar.setBounds(15, 31, 300, 138);
 		contentPane.add(txtpnDescripcinSeEvaluar);
 		
 		JTextPane txtpnDescripcinSeEvaluar_1 = new JTextPane();
 		txtpnDescripcinSeEvaluar_1.setText("\u25CF  Subcaracter\u00EDstica: Comportamiento en el tiempo\r\nDescripci\u00F3n:\r\nSe evaluar\u00E1 el tiempo que est\u00E1 el producto software sin informarle al usuario del estado en que se encuentra la solicitud que realiz\u00F3.\r\n \r\nCaracter\u00EDsticas a medir\r\n\u2022 El producto est\u00E1 \"N\" segundos sin informar al usuario del estado de la solicitud");
 		txtpnDescripcinSeEvaluar_1.setEditable(false);
 		txtpnDescripcinSeEvaluar_1.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinSeEvaluar_1.setBounds(15, 189, 301, 136);
+		txtpnDescripcinSeEvaluar_1.setBounds(15, 212, 300, 161);
 		contentPane.add(txtpnDescripcinSeEvaluar_1);
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(15, 180, 565, 2);
+		separator_1.setBounds(15, 203, 565, 2);
 		contentPane.add(separator_1);
 		
 		JLabel lblEficiencia = new JLabel("Eficiencia");
@@ -114,15 +114,15 @@ public class FrameEficiencia extends JFrame {
 			}
 		});
 		RecursoBox.setModel(new DefaultComboBoxModel(new String[] {"46% o m\u00E1s", "21% a 45%", "20% o menos"}));
-		RecursoBox.setBounds(449, 74, 131, 20);
+		RecursoBox.setBounds(325, 56, 215, 20);
 		contentPane.add(RecursoBox);
 		
 		JLabel lblEvaluacion = new JLabel("Evaluacion");
-		lblEvaluacion.setBounds(449, 47, 131, 14);
+		lblEvaluacion.setBounds(325, 31, 131, 14);
 		contentPane.add(lblEvaluacion);
 		
 		JLabel label = new JLabel("Evaluacion");
-		label.setBounds(449, 181, 131, 14);
+		label.setBounds(325, 212, 131, 14);
 		contentPane.add(label);
 		
 		JComboBox TiempoBox = new JComboBox();
@@ -145,8 +145,15 @@ public class FrameEficiencia extends JFrame {
 			}
 		});
 		TiempoBox.setModel(new DefaultComboBoxModel(new String[] {"4 o m\u00E1s segundos", "3 segundos", "menos de 2 segundos"}));
-		TiempoBox.setBounds(449, 206, 131, 20);
+		TiempoBox.setBounds(325, 237, 215, 20);
 		contentPane.add(TiempoBox);
+	
+		/******Fondo de Pantalla********/
+		JLabel lblNewfondo = new JLabel("Fondo");
+		lblNewfondo.setIcon(new ImageIcon(FrameCalculoFinal.class.getResource("/resurso/bg.jpg")));
+		lblNewfondo.setBounds(0, 0, 590, 405);
+		contentPane.add(lblNewfondo);
+		
 	}
 
 	private void botonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botonSiguienteActionPerformed

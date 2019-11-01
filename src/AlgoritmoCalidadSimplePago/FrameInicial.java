@@ -16,6 +16,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Locale;
 import java.awt.event.ActionEvent;
+import javax.swing.ImageIcon;
+import java.awt.Color;
 
 public class FrameInicial extends JFrame {
 
@@ -67,6 +69,16 @@ public class FrameInicial extends JFrame {
 		JLabel lblEncuestaPartaEl = new JLabel("Encuesta para el usuario...");
 		lblEncuestaPartaEl.setBounds(69, 69, 279, 14);
 		contentPane.add(lblEncuestaPartaEl);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(0, 5, 434, 256);
+		contentPane.add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblFondo = new JLabel("fondo");
+		lblFondo.setBounds(0, 0, 434, 256);
+		panel.add(lblFondo);
+		lblFondo.setIcon(new ImageIcon(FrameInicial.class.getResource("/resurso/bg.jpg")));
 	}
 	
 	private void botonIniciarActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botonSiguienteActionPerformed
@@ -75,5 +87,4 @@ public class FrameInicial extends JFrame {
 		this.setVisible(false);
 		this.setLocationRelativeTo(null);
 	}// GEN-LAST:event_botonSiguienteActionPerformed
-
 }

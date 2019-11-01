@@ -20,6 +20,7 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 
 public class FrameFiabilidad extends JFrame {
 
@@ -50,7 +51,7 @@ public class FrameFiabilidad extends JFrame {
 	 */
 	public FrameFiabilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 400);
+		setBounds(100, 100, 606, 444);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple págo");
@@ -69,27 +70,27 @@ public class FrameFiabilidad extends JFrame {
 		contentPane.add(separator);
 		
 		JTextPane txtpnDescripcinEsLa = new JTextPane();
-		txtpnDescripcinEsLa.setText("\u25CF       Subcaracter\u00EDstica: Tolerancia a fallos\r\nDescripci\u00F3n:\r\nEs la capacidad del producto software de mantener la integridad de los datos cuando se producen fallas del sistema.\r\n \r\nCaracter\u00EDsticas a medir\r\n\u2022 Cuando sucede un error se protegen los datos procesados.\r\n\u2022 Se realiza un log de actividades que el sistema estaba haciendo.");
+		txtpnDescripcinEsLa.setText("\u25CF  Subcaracter\u00EDstica: Tolerancia a fallos\r\nDescripci\u00F3n:\r\nEs la capacidad del producto software de mantener la integridad de los datos cuando se producen fallas del sistema.\r\nCaracter\u00EDsticas a medir\r\n\u2022 Cuando sucede un error se protegen los datos procesados.\r\n\u2022 Se realiza un log de actividades que el sistema estaba haciendo.");
 		txtpnDescripcinEsLa.setEditable(false);
 		txtpnDescripcinEsLa.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinEsLa.setBounds(13, 31, 298, 151);
+		txtpnDescripcinEsLa.setBounds(15, 31, 300, 161);
 		contentPane.add(txtpnDescripcinEsLa);
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(15, 180, 565, 2);
+		separator_1.setBounds(15, 203, 565, 2);
 		contentPane.add(separator_1);
 		
 		JTextPane txtpnDescripcin = new JTextPane();
-		txtpnDescripcin.setText("\u25CF        Subcaracter\u00EDstica: Capacidad de recuperaci\u00F3n de errores\r\nDescripci\u00F3n:\r\nEs la capacidad del sistema de reanudar sus actividades cuando se producen errores cr\u00EDticos.\r\n \r\nCaracter\u00EDsticas a medir\r\n\u2022 El sistema reanuda las actividades si se produce una falla cr\u00EDtica.\r\n\u2022 Reanuda sus actividades y vuelve al estado en que estaba.");
+		txtpnDescripcin.setText("\u25CF  Subcaracter\u00EDstica: Capacidad de recuperaci\u00F3n de errores\r\nDescripci\u00F3n:\r\nEs la capacidad del sistema de reanudar sus actividades cuando se producen errores cr\u00EDticos.\r\n\r\nCaracter\u00EDsticas a medir\r\n\u2022 El sistema reanuda las actividades si se produce una falla cr\u00EDtica.\r\n\u2022 Reanuda sus actividades y vuelve al estado en que estaba.");
 		txtpnDescripcin.setEditable(false);
 		txtpnDescripcin.setBackground(new Color(255, 255, 224));
-		txtpnDescripcin.setBounds(13, 189, 298, 161);
+		txtpnDescripcin.setBounds(15, 212, 300, 165);
 		contentPane.add(txtpnDescripcin);
 		
 		/******ComboBoxs******/
 		
 		JLabel label = new JLabel("Evaluacion");
-		label.setBounds(328, 33, 237, 14);
+		label.setBounds(325, 33, 237, 14);
 		contentPane.add(label);
 		
 		JComboBox ToleranciaBox = new JComboBox();
@@ -113,11 +114,11 @@ public class FrameFiabilidad extends JFrame {
 		});
 		ToleranciaBox.setModel(new DefaultComboBoxModel(new String[] {"No cumple con alguna caracter\u00EDstica", "Cumple con 1 caracter\u00EDstica", "Cumple con 2 caracter\u00EDsticas"}));
 		ToleranciaBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		ToleranciaBox.setBounds(328, 58, 237, 20);
+		ToleranciaBox.setBounds(325, 58, 215, 20);
 		contentPane.add(ToleranciaBox);
 	
 		JLabel label_1 = new JLabel("Evaluacion");
-		label_1.setBounds(328, 189, 237, 14);
+		label_1.setBounds(325, 214, 237, 14);
 		contentPane.add(label_1);
 		
 		JComboBox CapacidadBox = new JComboBox();
@@ -140,8 +141,8 @@ public class FrameFiabilidad extends JFrame {
 			}
 		});
 		CapacidadBox.setModel(new DefaultComboBoxModel(new String[] {"No cumple con ninguna caracter\u00EDstica", "Cumple con 1 caracter\u00EDstica", "Cumple con 2 caracter\u00EDsticas"}));
-		CapacidadBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		CapacidadBox.setBounds(328, 210, 237, 20);
+		CapacidadBox.setToolTipText("");
+		CapacidadBox.setBounds(325, 239, 215, 20);
 		contentPane.add(CapacidadBox);
 		
 		/*****Boton Siguiente****/
@@ -152,9 +153,14 @@ public class FrameFiabilidad extends JFrame {
 				 botonSiguienteActionPerformed(e);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(468, 277, 97, 23);
+		btnNewButtonSiguiente.setBounds(483, 371, 97, 23);
 		contentPane.add(btnNewButtonSiguiente);
 		
+		/******Fondo de Pantalla********/
+		JLabel lblNewfondo = new JLabel("Fondo");
+		lblNewfondo.setIcon(new ImageIcon(FrameCalculoFinal.class.getResource("/resurso/bg.jpg")));
+		lblNewfondo.setBounds(0, 0, 590, 405);
+		contentPane.add(lblNewfondo);
 	}
 	
 	private void botonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botonSiguienteActionPerformed

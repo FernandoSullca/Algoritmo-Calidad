@@ -49,7 +49,7 @@ public class FrameMantenibilidad extends JFrame {
 	 */
 	public FrameMantenibilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 378);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple - Pago");
@@ -63,7 +63,7 @@ public class FrameMantenibilidad extends JFrame {
 				botonSiguienteActionPerformed(e);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(490, 305, 110, 45);
+		btnNewButtonSiguiente.setBounds(476, 305, 110, 45);
 		contentPane.add(btnNewButtonSiguiente);
 		
 		JLabel lblFuncionabilidad = new JLabel("Mantenibilidad");
@@ -126,7 +126,7 @@ public class FrameMantenibilidad extends JFrame {
 		
 		cambiadoBox.setModel(new DefaultComboBoxModel(new String[] {"mayor o igual a 21", "entre 11 y 20", "menor o igual a 10"}));
 		cambiadoBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		cambiadoBox.setBounds(36, 317, 367, 33);
+		cambiadoBox.setBounds(36, 305, 367, 20);
 		contentPane.add(cambiadoBox);
 		
 		JLabel lblAnalisisDeCodigo = new JLabel("Analisis de Codigo");
@@ -149,7 +149,7 @@ public class FrameMantenibilidad extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(FrameMantenibilidad.class.getResource("/recursos/bg.jpg")));
-		lblNewLabel.setBounds(0, 0, 606, 356);
+		lblNewLabel.setBounds(0, 0, 606, 371);
 		contentPane.add(lblNewLabel);
 	}
 

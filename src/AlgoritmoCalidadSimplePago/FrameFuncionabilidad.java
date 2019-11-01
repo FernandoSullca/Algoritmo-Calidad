@@ -66,7 +66,7 @@ public class FrameFuncionabilidad extends JFrame {
 				botonSiguienteActionPerformed(arg0);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(490, 327, 110, 45);
+		btnNewButtonSiguiente.setBounds(476, 310, 110, 45);
 		contentPane.add(btnNewButtonSiguiente);
 
 		JLabel lblFuncionabilidad = new JLabel("Funcionabilidad");
@@ -138,7 +138,7 @@ public class FrameFuncionabilidad extends JFrame {
 		});
 		ExactitudBox.setModel(new DefaultComboBoxModel(new String[] {"Los resultados tienen m\u00E1s de 3 errores", "Los resultados tienen entre 0 y 3 errores", "Los resultados se muestran sin errores"}));
 		ExactitudBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		ExactitudBox.setBounds(37, 339, 391, 23);
+		ExactitudBox.setBounds(37, 305, 391, 23);
 		contentPane.add(ExactitudBox);
 
 		JLabel lblSeguridadDeAcceso = new JLabel("Seguridad de Acceso");

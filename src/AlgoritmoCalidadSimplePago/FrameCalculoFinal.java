@@ -189,7 +189,7 @@ public class FrameCalculoFinal extends JFrame {
 
 		JTextPane textPane = new JTextPane();
 		textPane.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
-		textPane.setBounds(395, 135, 193, 118);
+		textPane.setBounds(395, 135, 185, 118);
 		contentPane.add(textPane);
 
 		JLabel lblNewLabel = new JLabel("");
@@ -258,7 +258,7 @@ public class FrameCalculoFinal extends JFrame {
 		 * DecimalFormat df= new DecimalFormat("#.00");
 		 * textFieldPromedio.setText(String.valueOf(df.format(decimal)));
 		 */
-		textFieldPromedio.setText("0.0");
+		textFieldPromedio.setText(String.format("%.2f",PromedioTotal));
 	}
 
 	/**

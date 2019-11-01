@@ -50,7 +50,7 @@ public class FrameFiabilidad extends JFrame {
 	 */
 	public FrameFiabilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 378);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple - Pago");
@@ -64,7 +64,7 @@ public class FrameFiabilidad extends JFrame {
 				 botonSiguienteActionPerformed(e);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(490, 305, 110, 45);
+		btnNewButtonSiguiente.setBounds(476, 310, 110, 45);
 		contentPane.add(btnNewButtonSiguiente);
 
 		JLabel lblFuncionabilidad = new JLabel("Fiabilidad");
@@ -126,7 +126,7 @@ public class FrameFiabilidad extends JFrame {
 		});
 		CapacidadBox.setModel(new DefaultComboBoxModel(new String[] {"No cumple con ninguna caracter\u00EDstica", "Cumple con 1 caracter\u00EDstica", "Cumple con 2 caracter\u00EDsticas"}));
 		CapacidadBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		CapacidadBox.setBounds(42, 317, 360, 20);
+		CapacidadBox.setBounds(42, 305, 360, 20);
 		contentPane.add(CapacidadBox);
 
 		JLabel lblToleranciaAFallos = new JLabel("Tolerancia a Fallos");
@@ -157,7 +157,7 @@ public class FrameFiabilidad extends JFrame {
 
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(FrameFiabilidad.class.getResource("/recursos/bg.jpg")));
-		lblNewLabel.setBounds(0, 0, 606, 356);
+		lblNewLabel.setBounds(0, 0, 606, 361);
 		contentPane.add(lblNewLabel);
 
 	}

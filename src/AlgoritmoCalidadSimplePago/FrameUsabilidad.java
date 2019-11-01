@@ -49,7 +49,7 @@ public class FrameUsabilidad extends JFrame {
 	 */
 	public FrameUsabilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 378);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple - Pago");
@@ -63,7 +63,7 @@ public class FrameUsabilidad extends JFrame {
 				botonSiguienteActionPerformed(e);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(490, 305, 110, 45);
+		btnNewButtonSiguiente.setBounds(470, 310, 110, 45);
 		contentPane.add(btnNewButtonSiguiente);
 		
 		JLabel lblFuncionabilidad = new JLabel("Usabilidad");
@@ -125,7 +125,7 @@ public class FrameUsabilidad extends JFrame {
 		});
 		AtractivoBox.setModel(new DefaultComboBoxModel(new String[] {"[0-4]", "[4-7]", "[8-10]"}));
 		AtractivoBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		AtractivoBox.setBounds(32, 317, 360, 33);
+		AtractivoBox.setBounds(32, 305, 360, 20);
 		contentPane.add(AtractivoBox);
 		
 		JLabel lblCapacidadDeSer = new JLabel("Capacidad de ser entendido");
@@ -152,7 +152,7 @@ public class FrameUsabilidad extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(FrameUsabilidad.class.getResource("/recursos/bg.jpg")));
-		lblNewLabel.setBounds(0, 0, 606, 356);
+		lblNewLabel.setBounds(0, 0, 606, 361);
 		contentPane.add(lblNewLabel);
 	}
 		

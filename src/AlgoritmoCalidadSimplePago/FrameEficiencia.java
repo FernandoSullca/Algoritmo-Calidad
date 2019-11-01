@@ -49,7 +49,7 @@ public class FrameEficiencia extends JFrame {
 	 */
 	public FrameEficiencia() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 378);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple - Pago");
@@ -64,7 +64,7 @@ public class FrameEficiencia extends JFrame {
 				 botonSiguienteActionPerformed(e);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(490, 305, 110, 45);
+		btnNewButtonSiguiente.setBounds(470, 310, 110, 45);
 		contentPane.add(btnNewButtonSiguiente);
 		
 		JSeparator separator = new JSeparator();
@@ -124,7 +124,7 @@ public class FrameEficiencia extends JFrame {
 			}
 		});
 		TiempoBox.setModel(new DefaultComboBoxModel(new String[] {"4 o m\u00E1s segundos", "3 segundos", "menos de 2 segundos"}));
-		TiempoBox.setBounds(36, 317, 366, 20);
+		TiempoBox.setBounds(36, 305, 366, 20);
 		contentPane.add(TiempoBox);
 		
 		JLabel lblUtilizacionDeRecursos = new JLabel("Utilizacion de Recursos");
@@ -147,7 +147,7 @@ public class FrameEficiencia extends JFrame {
 		
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(FrameEficiencia.class.getResource("/recursos/bg.jpg")));
-		lblNewLabel.setBounds(0, 0, 606, 356);
+		lblNewLabel.setBounds(0, 0, 613, 373);
 		contentPane.add(lblNewLabel);
 	}
 

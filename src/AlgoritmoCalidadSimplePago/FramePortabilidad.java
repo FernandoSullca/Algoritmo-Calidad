@@ -49,7 +49,7 @@ public class FramePortabilidad extends JFrame {
 	 */
 	public FramePortabilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 378);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple - Pago");
@@ -63,7 +63,7 @@ public class FramePortabilidad extends JFrame {
 				botonSiguienteActionPerformed(e);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(490, 305, 110, 45);
+		btnNewButtonSiguiente.setBounds(470, 305, 110, 45);
 		contentPane.add(btnNewButtonSiguiente);
 
 		JLabel lblFuncionabilidad = new JLabel("Portabilidad");
@@ -126,7 +126,7 @@ public class FramePortabilidad extends JFrame {
 		});
 		InstalabilidadBox.setModel(new DefaultComboBoxModel(new String[] {"El producto se instala en 7 o m\u00E1s pasos", "El producto se instala entre 4 y 6 pasos", "El producto se instala en 3 o menos pasos"}));
 		InstalabilidadBox.setToolTipText("");
-		InstalabilidadBox.setBounds(32, 317, 361, 33);
+		InstalabilidadBox.setBounds(32, 305, 361, 20);
 		contentPane.add(InstalabilidadBox);
 
 		JLabel lblAdaptabilidad = new JLabel("Adaptabilidad");
@@ -149,7 +149,7 @@ public class FramePortabilidad extends JFrame {
 
 		JLabel lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(FramePortabilidad.class.getResource("/recursos/bg.jpg")));
-		lblNewLabel.setBounds(0, 0, 606, 356);
+		lblNewLabel.setBounds(0, 0, 606, 377);
 		contentPane.add(lblNewLabel);
 	}
 

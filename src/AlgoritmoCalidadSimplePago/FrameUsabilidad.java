@@ -1,7 +1,5 @@
 package AlgoritmoCalidadSimplePago;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JButton;
@@ -9,7 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
-import javax.swing.JTextPane;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -20,13 +17,16 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
 
+@SuppressWarnings({"rawtypes", "unchecked"})
 public class FrameUsabilidad extends JFrame {
 
 	private JPanel contentPane;
 	private int resulEnt;
 	private int resulAtract;
-
+	private static final long serialVersionUID = 1L;
 	/**
 	 * Launch the application.
 	 */
@@ -49,10 +49,10 @@ public class FrameUsabilidad extends JFrame {
 	 */
 	public FrameUsabilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 350);
+		setBounds(100, 100, 606, 378);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setTitle("Algoritmo de Calidad Simple p�go");
+		setTitle("Algoritmo de Calidad Simple - Pago");
 		setContentPane(contentPane);
 		setLocationRelativeTo(null);
 		contentPane.setLayout(null);
@@ -63,39 +63,22 @@ public class FrameUsabilidad extends JFrame {
 				botonSiguienteActionPerformed(e);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(483, 277, 97, 23);
+		btnNewButtonSiguiente.setBounds(490, 305, 110, 45);
 		contentPane.add(btnNewButtonSiguiente);
 		
 		JLabel lblFuncionabilidad = new JLabel("Usabilidad");
-		lblFuncionabilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblFuncionabilidad.setBounds(21, 0, 103, 20);
+		lblFuncionabilidad.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFuncionabilidad.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblFuncionabilidad.setBounds(6, 2, 594, 45);
 		contentPane.add(lblFuncionabilidad);
 		
 		JSeparator separator = new JSeparator();
-		separator.setBounds(15, 20, 565, 2);
+		separator.setBounds(15, 45, 565, 14);
 		contentPane.add(separator);
 		
-		JTextPane txtpnDescripcinCapacidadQue = new JTextPane();
-		txtpnDescripcinCapacidadQue.setText("\u25CF        Subcaracter\u00EDstica: Capacidad de ser entendido\r\nDescripci\u00F3n:\tCapacidad que posee el software para ayudar a los usuarios ante una determinada situaci\u00F3n donde se necesite asistencia.\r\n \r\nCaracter\u00EDsticas a medir\r\n\u2022 Posee ayuda contextual sobre men\u00FAs y botones de acci\u00F3n.\r\n\u2022 Manual de usuario incorporado al sistema como un men\u00FA dedicado.");
-		txtpnDescripcinCapacidadQue.setEditable(false);
-		txtpnDescripcinCapacidadQue.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinCapacidadQue.setBounds(15, 31, 304, 111);
-		contentPane.add(txtpnDescripcinCapacidadQue);
-		
-		JTextPane txtpnDescripcinEsLa = new JTextPane();
-		txtpnDescripcinEsLa.setText("\u25CF        Subcaracter\u00EDstica: Capacidad de atracci\u00F3n\r\nDescripci\u00F3n\r\nEs la capacidad del producto software para ser atractivo al usuario.\r\n\r\nCaracter\u00EDsticas a medir\r\n\u2022 1..10");
-		txtpnDescripcinEsLa.setEditable(false);
-		txtpnDescripcinEsLa.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinEsLa.setBounds(15, 164, 304, 113);
-		contentPane.add(txtpnDescripcinEsLa);
-		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(15, 153, 565, 2);
+		separator_1.setBounds(15, 204, 565, 14);
 		contentPane.add(separator_1);
-		
-		JLabel lblSubcaractersticaCapacidad_1 = new JLabel("");
-		lblSubcaractersticaCapacidad_1.setBounds(21, 168, 304, 14);
-		contentPane.add(lblSubcaractersticaCapacidad_1);
 		
 		JComboBox EntendidoBox = new JComboBox();
 		EntendidoBox.addActionListener(new ActionListener() {
@@ -118,12 +101,8 @@ public class FrameUsabilidad extends JFrame {
 		});
 		EntendidoBox.setModel(new DefaultComboBoxModel(new String[] {"No cumple con ninguna caracter\u00EDstica.", "Cumple con 1 caracter\u00EDstica.", "Cumple con 2 caracter\u00EDsticas."}));
 		EntendidoBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		EntendidoBox.setBounds(366, 74, 206, 20);
+		EntendidoBox.setBounds(32, 172, 360, 20);
 		contentPane.add(EntendidoBox);
-		
-		JLabel label = new JLabel("Evaluacion");
-		label.setBounds(335, 49, 237, 14);
-		contentPane.add(label);
 		
 		JComboBox AtractivoBox = new JComboBox();
 		AtractivoBox.addActionListener(new ActionListener() {
@@ -146,12 +125,35 @@ public class FrameUsabilidad extends JFrame {
 		});
 		AtractivoBox.setModel(new DefaultComboBoxModel(new String[] {"[0-4]", "[4-7]", "[8-10]"}));
 		AtractivoBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		AtractivoBox.setBounds(395, 205, 177, 20);
+		AtractivoBox.setBounds(32, 317, 360, 33);
 		contentPane.add(AtractivoBox);
 		
-		JLabel label_1 = new JLabel("Evaluacion");
-		label_1.setBounds(335, 180, 237, 14);
-		contentPane.add(label_1);
+		JLabel lblCapacidadDeSer = new JLabel("Capacidad de ser entendido");
+		lblCapacidadDeSer.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		lblCapacidadDeSer.setBounds(37, 65, 285, 20);
+		contentPane.add(lblCapacidadDeSer);
+		
+		JLabel lblPosee = new JLabel("* ¿ Posee ayuda contextual y botonces de accion ?");
+		lblPosee.setBounds(121, 97, 393, 20);
+		contentPane.add(lblPosee);
+		
+		JLabel lblContiene = new JLabel("* ¿ Contiene manual de usuario ?");
+		lblContiene.setBounds(121, 129, 333, 20);
+		contentPane.add(lblContiene);
+		
+		JLabel lblCapacidadDeAtraccion = new JLabel("Capacidad de atraccion");
+		lblCapacidadDeAtraccion.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		lblCapacidadDeAtraccion.setBounds(41, 239, 292, 27);
+		contentPane.add(lblCapacidadDeAtraccion);
+		
+		JLabel lblAtractivoDel = new JLabel("* Atractivo del Software");
+		lblAtractivoDel.setBounds(121, 278, 264, 27);
+		contentPane.add(lblAtractivoDel);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(FrameUsabilidad.class.getResource("/recursos/bg.jpg")));
+		lblNewLabel.setBounds(0, 0, 606, 356);
+		contentPane.add(lblNewLabel);
 	}
 		
 	private void botonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botonSiguienteActionPerformed

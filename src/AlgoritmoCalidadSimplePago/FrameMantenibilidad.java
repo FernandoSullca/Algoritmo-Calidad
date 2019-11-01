@@ -1,7 +1,5 @@
 package AlgoritmoCalidadSimplePago;
 
-import java.awt.BorderLayout;
-import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JButton;
@@ -9,7 +7,6 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
-import javax.swing.JTextPane;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -20,13 +17,16 @@ import java.awt.event.ActionEvent;
 import java.awt.Font;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.SwingConstants;
+import javax.swing.ImageIcon;
 
+@SuppressWarnings({"rawtypes", "unchecked"})
 public class FrameMantenibilidad extends JFrame {
 
 	private JPanel contentPane;
 	protected int resulCapAnali;
 	protected int resulCapCambi;
-
+	private static final long serialVersionUID = 1L;
 	/**
 	 * Launch the application.
 	 */
@@ -49,10 +49,10 @@ public class FrameMantenibilidad extends JFrame {
 	 */
 	public FrameMantenibilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 350);
+		setBounds(100, 100, 606, 378);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setTitle("Algoritmo de Calidad Simple págo");
+		setTitle("Algoritmo de Calidad Simple - Pago");
 		setContentPane(contentPane);
 		setLocationRelativeTo(null);
 		contentPane.setLayout(null);
@@ -63,34 +63,21 @@ public class FrameMantenibilidad extends JFrame {
 				botonSiguienteActionPerformed(e);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(483, 277, 97, 23);
+		btnNewButtonSiguiente.setBounds(490, 305, 110, 45);
 		contentPane.add(btnNewButtonSiguiente);
 		
 		JLabel lblFuncionabilidad = new JLabel("Mantenibilidad");
-		lblFuncionabilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblFuncionabilidad.setBounds(21, 0, 103, 20);
+		lblFuncionabilidad.setHorizontalAlignment(SwingConstants.CENTER);
+		lblFuncionabilidad.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblFuncionabilidad.setBounds(21, 0, 579, 45);
 		contentPane.add(lblFuncionabilidad);
 		
 		JSeparator separator = new JSeparator();
-		separator.setBounds(15, 20, 565, 4);
+		separator.setBounds(21, 45, 565, 11);
 		contentPane.add(separator);
 		
-		JTextPane txtpnDescripcinParaEvaluar = new JTextPane();
-		txtpnDescripcinParaEvaluar.setText("\u25CF  Subcaracter\u00EDstica: Capacidad del c\u00F3digo para ser analizado\r\nDescripci\u00F3n\r\nPara evaluar esta subcaracter\u00EDstica se tiene en cuenta el porcentaje de comentarios que posee el c\u00F3digo por cada m\u00E9todo y en general.\r\n \r\nCaracter\u00EDsticas a medir\r\n\u2022 \"N%\" del c\u00F3digo comentado\r\n");
-		txtpnDescripcinParaEvaluar.setEditable(false);
-		txtpnDescripcinParaEvaluar.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinParaEvaluar.setBounds(15, 31, 321, 119);
-		contentPane.add(txtpnDescripcinParaEvaluar);
-		
-		JTextPane txtpnDescripcinParaEvaluar_1 = new JTextPane();
-		txtpnDescripcinParaEvaluar_1.setText("\u25CF   Subcaracter\u00EDstica: Capacidad del c\u00F3digo para ser cambiado\r\nDescripci\u00F3n\r\nPara evaluar esta subcaracter\u00EDstica se tomar\u00E1 en cuenta la complejidad ciclom\u00E1tica del m\u00E9todo.\r\n \r\nCaracter\u00EDsticas a medir\r\n\u2022 La complejidad ciclom\u00E1tica es mayor o igual a , entre , menor o igual a \"N\"");
-		txtpnDescripcinParaEvaluar_1.setEditable(false);
-		txtpnDescripcinParaEvaluar_1.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinParaEvaluar_1.setBounds(13, 164, 323, 136);
-		contentPane.add(txtpnDescripcinParaEvaluar_1);
-		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(15, 153, 565, 11);
+		separator_1.setBounds(15, 175, 565, 11);
 		contentPane.add(separator_1);
 		
 		JComboBox analizadoBox = new JComboBox();
@@ -114,16 +101,8 @@ public class FrameMantenibilidad extends JFrame {
 		});
 		analizadoBox.setModel(new DefaultComboBoxModel(new String[] {"10% o menos", "Entre 11 y 25% ", "26% o m\u00E1s"}));
 		analizadoBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		analizadoBox.setBounds(409, 67, 171, 20);
+		analizadoBox.setBounds(36, 151, 367, 20);
 		contentPane.add(analizadoBox);
-		
-		JLabel label = new JLabel("Evaluacion");
-		label.setBounds(343, 42, 237, 14);
-		contentPane.add(label);
-		
-		JLabel label_1 = new JLabel("Evaluacion");
-		label_1.setBounds(343, 173, 237, 14);
-		contentPane.add(label_1);
 		
 		JComboBox cambiadoBox = new JComboBox();
 		cambiadoBox.addActionListener(new ActionListener() {
@@ -147,8 +126,31 @@ public class FrameMantenibilidad extends JFrame {
 		
 		cambiadoBox.setModel(new DefaultComboBoxModel(new String[] {"mayor o igual a 21", "entre 11 y 20", "menor o igual a 10"}));
 		cambiadoBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		cambiadoBox.setBounds(414, 198, 166, 20);
+		cambiadoBox.setBounds(36, 317, 367, 33);
 		contentPane.add(cambiadoBox);
+		
+		JLabel lblAnalisisDeCodigo = new JLabel("Analisis de Codigo");
+		lblAnalisisDeCodigo.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		lblAnalisisDeCodigo.setBounds(31, 57, 173, 25);
+		contentPane.add(lblAnalisisDeCodigo);
+		
+		JLabel lblDe = new JLabel("* % de codigo comentado");
+		lblDe.setBounds(120, 105, 265, 25);
+		contentPane.add(lblDe);
+		
+		JLabel lblAdaptabilidadAlCambio = new JLabel("Adaptabilidad al Cambio");
+		lblAdaptabilidadAlCambio.setFont(new Font("Lucida Grande", Font.PLAIN, 15));
+		lblAdaptabilidadAlCambio.setBounds(31, 198, 333, 33);
+		contentPane.add(lblAdaptabilidadAlCambio);
+		
+		JLabel lblComplejidadCiclomatica = new JLabel("* Complejidad ciclomatica");
+		lblComplejidadCiclomatica.setBounds(120, 271, 265, 20);
+		contentPane.add(lblComplejidadCiclomatica);
+		
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon(FrameMantenibilidad.class.getResource("/recursos/bg.jpg")));
+		lblNewLabel.setBounds(0, 0, 606, 356);
+		contentPane.add(lblNewLabel);
 	}
 
 	private void botonSiguienteActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_botonSiguienteActionPerformed

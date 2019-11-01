@@ -59,7 +59,7 @@ public class FrameFuncionabilidad extends JFrame {
 	 */
 	public FrameFuncionabilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 350);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple págo");
@@ -73,7 +73,7 @@ public class FrameFuncionabilidad extends JFrame {
 				botonSiguienteActionPerformed(arg0);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(483, 277, 97, 23);
+		btnNewButtonSiguiente.setBounds(483, 327, 97, 23);
 		contentPane.add(btnNewButtonSiguiente);
 
 		JLabel lblFuncionabilidad = new JLabel("Funcionabilidad");
@@ -90,7 +90,7 @@ public class FrameFuncionabilidad extends JFrame {
 		txtpnSubcaractersticaSeguridadDe.setEditable(false);
 		txtpnSubcaractersticaSeguridadDe.setText("\u25CF  Subcaracter\u00EDstica:  Seguridad de acceso\r\nDescripci\u00F3n:\r\nCapacidad del producto software para asegurar la integridad y confidencialidad de los datos.\r\n\r\nCaracter\u00EDsticas a medir:\r\n\u2022 Encriptaci\u00F3n de datos\r\n\u2022 Inicio de sesi\u00F3n de usuarios");
 		txtpnSubcaractersticaSeguridadDe.setBackground(new Color(255, 255, 224));
-		txtpnSubcaractersticaSeguridadDe.setBounds(15, 31, 300, 118);
+		txtpnSubcaractersticaSeguridadDe.setBounds(15, 31, 300, 138);
 		contentPane.add(txtpnSubcaractersticaSeguridadDe);
 		
 		JTextPane txtpnDescripcinEsLa = new JTextPane();
@@ -98,11 +98,11 @@ public class FrameFuncionabilidad extends JFrame {
 		txtpnDescripcinEsLa.setText("\u25CF  Subcaracter\u00EDstica: Exactitud de resultados\r\nDescripci\u00F3n:\r\nEs la capacidad del producto software para proporcionar los resultados con el grado necesario de precisi\u00F3n.\r\n \r\nCaracter\u00EDsticas a medir\r\n\u2022 Los resultados tienen m\u00E1s de \"N\" errores");
 		txtpnDescripcinEsLa.setEditable(false);
 		txtpnDescripcinEsLa.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinEsLa.setBounds(15, 163, 300, 123);
+		txtpnDescripcinEsLa.setBounds(15, 189, 300, 138);
 		contentPane.add(txtpnDescripcinEsLa);
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(15, 153, 565, 23);
+		separator_1.setBounds(15, 180, 565, 23);
 		contentPane.add(separator_1);
 		
 		JComboBox SeguridadBox = new JComboBox();
@@ -161,11 +161,11 @@ public class FrameFuncionabilidad extends JFrame {
 		});
 		ExactitudBox.setModel(new DefaultComboBoxModel(new String[] {"Los resultados tienen m\u00E1s de 3 errores", "Los resultados tienen entre 0 y 3 errores", "Los resultados se muestran sin errores"}));
 		ExactitudBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
-		ExactitudBox.setBounds(325, 201, 237, 20);
+		ExactitudBox.setBounds(325, 210, 237, 20);
 		contentPane.add(ExactitudBox);
 		
 		JLabel label = new JLabel("Evaluacion");
-		label.setBounds(325, 176, 237, 14);
+		label.setBounds(325, 189, 237, 14);
 		contentPane.add(label);
 	}
 

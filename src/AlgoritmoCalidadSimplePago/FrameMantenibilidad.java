@@ -49,7 +49,7 @@ public class FrameMantenibilidad extends JFrame {
 	 */
 	public FrameMantenibilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 350);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple págo");
@@ -86,11 +86,11 @@ public class FrameMantenibilidad extends JFrame {
 		txtpnDescripcinParaEvaluar_1.setText("\u25CF   Subcaracter\u00EDstica: Capacidad del c\u00F3digo para ser cambiado\r\nDescripci\u00F3n\r\nPara evaluar esta subcaracter\u00EDstica se tomar\u00E1 en cuenta la complejidad ciclom\u00E1tica del m\u00E9todo.\r\n \r\nCaracter\u00EDsticas a medir\r\n\u2022 La complejidad ciclom\u00E1tica es mayor o igual a , entre , menor o igual a \"N\"");
 		txtpnDescripcinParaEvaluar_1.setEditable(false);
 		txtpnDescripcinParaEvaluar_1.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinParaEvaluar_1.setBounds(13, 164, 323, 136);
+		txtpnDescripcinParaEvaluar_1.setBounds(13, 189, 323, 136);
 		contentPane.add(txtpnDescripcinParaEvaluar_1);
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(15, 153, 565, 11);
+		separator_1.setBounds(15, 180, 565, 11);
 		contentPane.add(separator_1);
 		
 		JComboBox analizadoBox = new JComboBox();

@@ -49,7 +49,7 @@ public class FrameEficiencia extends JFrame {
 	 */
 	public FrameEficiencia() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 350);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple págo");
@@ -64,7 +64,7 @@ public class FrameEficiencia extends JFrame {
 				 botonSiguienteActionPerformed(e);
 			}
 		});
-		btnNewButtonSiguiente.setBounds(483, 277, 97, 23);
+		btnNewButtonSiguiente.setBounds(483, 327, 97, 23);
 		contentPane.add(btnNewButtonSiguiente);
 		
 		JSeparator separator = new JSeparator();
@@ -82,11 +82,11 @@ public class FrameEficiencia extends JFrame {
 		txtpnDescripcinSeEvaluar_1.setText("\u25CF  Subcaracter\u00EDstica: Comportamiento en el tiempo\r\nDescripci\u00F3n:\r\nSe evaluar\u00E1 el tiempo que est\u00E1 el producto software sin informarle al usuario del estado en que se encuentra la solicitud que realiz\u00F3.\r\n \r\nCaracter\u00EDsticas a medir\r\n\u2022 El producto est\u00E1 \"N\" segundos sin informar al usuario del estado de la solicitud");
 		txtpnDescripcinSeEvaluar_1.setEditable(false);
 		txtpnDescripcinSeEvaluar_1.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinSeEvaluar_1.setBounds(15, 164, 301, 136);
+		txtpnDescripcinSeEvaluar_1.setBounds(15, 189, 301, 136);
 		contentPane.add(txtpnDescripcinSeEvaluar_1);
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(15, 153, 565, 2);
+		separator_1.setBounds(15, 180, 565, 2);
 		contentPane.add(separator_1);
 		
 		JLabel lblEficiencia = new JLabel("Eficiencia");

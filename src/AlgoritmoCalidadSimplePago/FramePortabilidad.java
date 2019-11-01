@@ -48,7 +48,7 @@ public class FramePortabilidad extends JFrame {
 	 */
 	public FramePortabilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 350);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple págo");
@@ -84,11 +84,11 @@ public class FramePortabilidad extends JFrame {
 		txtpnDescripcinElProducto.setText("\u25CF        Subcaracter\u00EDstica: Instalabilidad\r\nDescripci\u00F3n\r\nEl producto software debe poder ser instalado en una cantidad m\u00EDnima de pasos.\r\n\r\nCaracter\u00EDsticas a medir\r\n\u2022 El producto se instala en 7 o m\u00E1s pasos\r\n\u2022 El producto se instala entre 4 y 6 pasos\r\n\u2022 El producto se instala en 3 o menos pasos\r\n");
 		txtpnDescripcinElProducto.setEditable(false);
 		txtpnDescripcinElProducto.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinElProducto.setBounds(15, 164, 306, 111);
+		txtpnDescripcinElProducto.setBounds(15, 189, 306, 111);
 		contentPane.add(txtpnDescripcinElProducto);
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(15, 153, 565, 2);
+		separator_1.setBounds(15, 180, 565, 2);
 		contentPane.add(separator_1);
 		
 		JLabel label = new JLabel("Evaluacion");

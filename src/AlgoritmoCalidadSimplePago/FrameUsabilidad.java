@@ -49,7 +49,7 @@ public class FrameUsabilidad extends JFrame {
 	 */
 	public FrameUsabilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 350);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple págo");
@@ -86,11 +86,11 @@ public class FrameUsabilidad extends JFrame {
 		txtpnDescripcinEsLa.setText("\u25CF        Subcaracter\u00EDstica: Capacidad de atracci\u00F3n\r\nDescripci\u00F3n\r\nEs la capacidad del producto software para ser atractivo al usuario.\r\n\r\nCaracter\u00EDsticas a medir\r\n\u2022 1..10");
 		txtpnDescripcinEsLa.setEditable(false);
 		txtpnDescripcinEsLa.setBackground(new Color(255, 255, 224));
-		txtpnDescripcinEsLa.setBounds(15, 164, 304, 113);
+		txtpnDescripcinEsLa.setBounds(15, 189, 304, 113);
 		contentPane.add(txtpnDescripcinEsLa);
 		
 		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(15, 153, 565, 2);
+		separator_1.setBounds(15, 180, 565, 2);
 		contentPane.add(separator_1);
 		
 		JLabel lblSubcaractersticaCapacidad_1 = new JLabel("");

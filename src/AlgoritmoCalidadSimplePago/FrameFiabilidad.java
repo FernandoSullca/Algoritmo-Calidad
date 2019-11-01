@@ -50,7 +50,7 @@ public class FrameFiabilidad extends JFrame {
 	 */
 	public FrameFiabilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 606, 350);
+		setBounds(100, 100, 606, 400);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setTitle("Algoritmo de Calidad Simple págo");
@@ -58,14 +58,6 @@ public class FrameFiabilidad extends JFrame {
 		setLocationRelativeTo(null);
 		contentPane.setLayout(null);
 		
-		JButton btnNewButtonSiguiente = new JButton("Siguiente");
-		btnNewButtonSiguiente.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				 botonSiguienteActionPerformed(e);
-			}
-		});
-		btnNewButtonSiguiente.setBounds(468, 277, 97, 23);
-		contentPane.add(btnNewButtonSiguiente);
 		
 		JLabel lblFuncionabilidad = new JLabel("Fiabilidad");
 		lblFuncionabilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
@@ -83,16 +75,22 @@ public class FrameFiabilidad extends JFrame {
 		txtpnDescripcinEsLa.setBounds(13, 31, 298, 111);
 		contentPane.add(txtpnDescripcinEsLa);
 		
+		JSeparator separator_1 = new JSeparator();
+		separator_1.setBounds(15, 180, 565, 2);
+		contentPane.add(separator_1);
+		
 		JTextPane txtpnDescripcin = new JTextPane();
 		txtpnDescripcin.setText("\u25CF        Subcaracter\u00EDstica: Capacidad de recuperaci\u00F3n de errores\r\nDescripci\u00F3n:\r\nEs la capacidad del sistema de reanudar sus actividades cuando se producen errores cr\u00EDticos.\r\n \r\nCaracter\u00EDsticas a medir\r\n\u2022 El sistema reanuda las actividades si se produce una falla cr\u00EDtica.\r\n\u2022 Reanuda sus actividades y vuelve al estado en que estaba.");
 		txtpnDescripcin.setEditable(false);
 		txtpnDescripcin.setBackground(new Color(255, 255, 224));
-		txtpnDescripcin.setBounds(13, 164, 298, 136);
+		txtpnDescripcin.setBounds(13, 210, 298, 136);
 		contentPane.add(txtpnDescripcin);
 		
-		JSeparator separator_1 = new JSeparator();
-		separator_1.setBounds(15, 153, 565, 2);
-		contentPane.add(separator_1);
+		/******ComboBoxs******/
+		
+		JLabel label = new JLabel("Evaluacion");
+		label.setBounds(328, 33, 237, 14);
+		contentPane.add(label);
 		
 		JComboBox ToleranciaBox = new JComboBox();
 		ToleranciaBox.addActionListener(new ActionListener() {
@@ -117,11 +115,7 @@ public class FrameFiabilidad extends JFrame {
 		ToleranciaBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
 		ToleranciaBox.setBounds(328, 58, 237, 20);
 		contentPane.add(ToleranciaBox);
-		
-		JLabel label = new JLabel("Evaluacion");
-		label.setBounds(328, 33, 237, 14);
-		contentPane.add(label);
-		
+	
 		JLabel label_1 = new JLabel("Evaluacion");
 		label_1.setBounds(328, 164, 237, 14);
 		contentPane.add(label_1);
@@ -149,6 +143,17 @@ public class FrameFiabilidad extends JFrame {
 		CapacidadBox.setToolTipText("Evaluaci\u00F3n\r\nNo cumple con ninguna caracter\u00EDstica. \u2192 0 puntos\r\nCumple con 1 caracter\u00EDstica. \u2192 1 punto\r\nCumple con 2 caracter\u00EDsticas. \u2192 2 puntos\r\n");
 		CapacidadBox.setBounds(328, 189, 237, 20);
 		contentPane.add(CapacidadBox);
+		
+		/*****Boton Siguiente****/
+		
+		JButton btnNewButtonSiguiente = new JButton("Siguiente");
+		btnNewButtonSiguiente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 botonSiguienteActionPerformed(e);
+			}
+		});
+		btnNewButtonSiguiente.setBounds(468, 277, 97, 23);
+		contentPane.add(btnNewButtonSiguiente);
 		
 	}
 	

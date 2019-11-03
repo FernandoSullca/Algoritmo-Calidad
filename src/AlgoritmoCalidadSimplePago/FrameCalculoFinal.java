@@ -1,36 +1,25 @@
 package AlgoritmoCalidadSimplePago;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.security.auth.callback.TextOutputCallback;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JTextArea;
-import java.awt.Color;
-import java.awt.Component;
-
-import javax.swing.JLabel;
 import java.awt.Font;
-import java.io.BufferedWriter;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
-import javax.swing.JTextField;
-import javax.swing.JSeparator;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import javax.swing.JTextPane;
 import javax.swing.ImageIcon;
-import javax.swing.JTable;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSeparator;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class FrameCalculoFinal extends JFrame {
 
 	private JPanel contentPane;
@@ -85,7 +74,6 @@ public class FrameCalculoFinal extends JFrame {
 		contentPane.setLayout(null);
 
 		JLabel lblFuncionabilidad = new JLabel("Funcionabilidad");
-		lblFuncionabilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
 		lblFuncionabilidad.setBounds(20, 65, 152, 20);
 		contentPane.add(lblFuncionabilidad);
 
@@ -120,8 +108,9 @@ public class FrameCalculoFinal extends JFrame {
 		contentPane.add(lblToalPromedioPonderado);
 
 		JLabel lblAnalisisFinal = new JLabel("Analisis Final");
-		lblAnalisisFinal.setFont(new Font("Tahoma", Font.BOLD, 17));
-		lblAnalisisFinal.setBounds(208, 11, 181, 21);
+		lblAnalisisFinal.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAnalisisFinal.setFont(new Font("Tahoma", Font.BOLD, 33));
+		lblAnalisisFinal.setBounds(112, 11, 397, 33);
 		contentPane.add(lblAnalisisFinal);
 
 		textField = new JTextField();
@@ -177,16 +166,17 @@ public class FrameCalculoFinal extends JFrame {
 		contentPane.add(textFieldPromedio);
 		textFieldPromedio.setColumns(10);
 
-		JButton btnSali = new JButton("Sali");
-		btnSali.addActionListener(new ActionListener() {
+		JButton btnFinalizar = new JButton("Finalizar");
+		btnFinalizar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				System.exit(0);
 			}
 		});
-		btnSali.setBounds(330, 226, 191, 23);
-		contentPane.add(btnSali);
+		btnFinalizar.setBounds(330, 226, 191, 23);
+		contentPane.add(btnFinalizar);
 
 		JTextPane textPane = new JTextPane();
+		textPane.setEditable(false);
 		textPane.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		textPane.setBounds(335, 80, 174, 94);
 		contentPane.add(textPane);
@@ -263,9 +253,7 @@ public class FrameCalculoFinal extends JFrame {
 	 */
 	public boolean error_de_entrada_requisitos_minimos() {
 		boolean error = false;
-				if (Entradas[0] < 2)
-					error = true;
-				for (int K = 1; K < 12; K++) {
+				for (int K = 0; K < 12; K++) {
 					if (Entradas[K] < 1)
 						error = true;
 				}

@@ -1,24 +1,19 @@
 package AlgoritmoCalidadSimplePago;
 
-import java.awt.BorderLayout;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
 import java.awt.Font;
-import javax.swing.JButton;
-import java.awt.event.ActionListener;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Locale;
 import java.awt.event.ActionEvent;
-import javax.swing.ImageIcon;
-import java.awt.Color;
+import java.awt.event.ActionListener;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+
+@SuppressWarnings("serial")
 public class FrameInicial extends JFrame {
 
 	private JPanel contentPane;
@@ -53,8 +48,9 @@ public class FrameInicial extends JFrame {
 		
 				
 		JLabel lblAlgorimoDeCalidad = new JLabel("Algorimo de Calidad");
-		lblAlgorimoDeCalidad.setBounds(5, 5, 424, 19);
-		lblAlgorimoDeCalidad.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblAlgorimoDeCalidad.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAlgorimoDeCalidad.setBounds(5, 5, 424, 42);
+		lblAlgorimoDeCalidad.setFont(new Font("Tahoma", Font.BOLD, 25));
 		contentPane.add(lblAlgorimoDeCalidad);
 		
 		JButton btnIniciar = new JButton("Iniciar");

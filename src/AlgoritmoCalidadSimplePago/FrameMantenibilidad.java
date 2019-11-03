@@ -1,27 +1,28 @@
 package AlgoritmoCalidadSimplePago;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-import javax.swing.JTextPane;
-import javax.swing.border.EmptyBorder;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.awt.event.ActionEvent;
-import java.awt.Font;
-import javax.swing.JComboBox;
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSeparator;
+import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class FrameMantenibilidad extends JFrame {
 
 	private JPanel contentPane;
@@ -48,6 +49,7 @@ public class FrameMantenibilidad extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	@SuppressWarnings({ "rawtypes", "unchecked" })
 	public FrameMantenibilidad() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 606, 444);
@@ -67,10 +69,11 @@ public class FrameMantenibilidad extends JFrame {
 		btnNewButtonSiguiente.setBounds(483, 371, 97, 23);
 		contentPane.add(btnNewButtonSiguiente);
 		
-		JLabel lblFuncionabilidad = new JLabel("Mantenibilidad");
-		lblFuncionabilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblFuncionabilidad.setBounds(21, 0, 103, 20);
-		contentPane.add(lblFuncionabilidad);
+		JLabel lblMantenibilidad = new JLabel("Mantenibilidad");
+		lblMantenibilidad.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMantenibilidad.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblMantenibilidad.setBounds(21, 0, 519, 20);
+		contentPane.add(lblMantenibilidad);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(15, 20, 565, 4);

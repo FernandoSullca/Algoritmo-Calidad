@@ -1,26 +1,28 @@
 package AlgoritmoCalidadSimplePago;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-import javax.swing.JTextPane;
-import javax.swing.border.EmptyBorder;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.awt.event.ActionEvent;
-import javax.swing.JComboBox;
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSeparator;
+import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class FramePortabilidad extends JFrame {
 
 	private JPanel contentPane;
@@ -66,9 +68,11 @@ public class FramePortabilidad extends JFrame {
 		btnNewButtonSiguiente.setBounds(483, 371, 97, 23);
 		contentPane.add(btnNewButtonSiguiente);
 		
-		JLabel lblFuncionabilidad = new JLabel("Portabilidad");
-		lblFuncionabilidad.setBounds(21, 0, 103, 20);
-		contentPane.add(lblFuncionabilidad);
+		JLabel lblPortabilidad = new JLabel("Portabilidad");
+		lblPortabilidad.setHorizontalAlignment(SwingConstants.CENTER);
+		lblPortabilidad.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblPortabilidad.setBounds(21, 0, 518, 20);
+		contentPane.add(lblPortabilidad);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(15, 20, 565, 2);

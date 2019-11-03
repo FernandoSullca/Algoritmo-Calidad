@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JSeparator;
 import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
@@ -67,10 +68,11 @@ public class FrameUsabilidad extends JFrame {
 		btnNewButtonSiguiente.setBounds(483, 371, 97, 23);
 		contentPane.add(btnNewButtonSiguiente);
 		
-		JLabel lblFuncionabilidad = new JLabel("Usabilidad");
-		lblFuncionabilidad.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblFuncionabilidad.setBounds(21, 0, 103, 20);
-		contentPane.add(lblFuncionabilidad);
+		JLabel lblUsabilidad = new JLabel("Usabilidad");
+		lblUsabilidad.setHorizontalAlignment(SwingConstants.CENTER);
+		lblUsabilidad.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblUsabilidad.setBounds(21, 0, 519, 20);
+		contentPane.add(lblUsabilidad);
 		
 		JSeparator separator = new JSeparator();
 		separator.setBounds(15, 20, 565, 2);

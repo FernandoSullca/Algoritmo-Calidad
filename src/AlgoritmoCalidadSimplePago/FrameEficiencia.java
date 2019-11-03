@@ -1,27 +1,28 @@
 package AlgoritmoCalidadSimplePago;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.JSeparator;
-import javax.swing.JTextPane;
-import javax.swing.border.EmptyBorder;
+import java.awt.Font;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.awt.event.ActionEvent;
-import java.awt.Font;
-import javax.swing.JComboBox;
+
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSeparator;
+import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
+@SuppressWarnings("serial")
 public class FrameEficiencia extends JFrame {
 
 	private JPanel contentPane;
@@ -48,6 +49,7 @@ public class FrameEficiencia extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	@SuppressWarnings("unchecked")
 	public FrameEficiencia() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 606, 444);
@@ -90,8 +92,9 @@ public class FrameEficiencia extends JFrame {
 		contentPane.add(separator_1);
 		
 		JLabel lblEficiencia = new JLabel("Eficiencia");
-		lblEficiencia.setFont(new Font("Tahoma", Font.BOLD, 11));
-		lblEficiencia.setBounds(20, 0, 103, 20);
+		lblEficiencia.setHorizontalAlignment(SwingConstants.CENTER);
+		lblEficiencia.setFont(new Font("Tahoma", Font.BOLD, 25));
+		lblEficiencia.setBounds(20, 0, 520, 20);
 		contentPane.add(lblEficiencia);
 		
 		JComboBox RecursoBox = new JComboBox();

@@ -35,7 +35,7 @@ public class FrameCalculoFinal extends JFrame {
 	private double[] Promedios;
 	private int[] Pesocaracteristica = { 15, 15, 10, 10, 10, 7 };
 	private double PromedioTotal;
-	private static final double Minimo_aceptable = 11.25;
+	private static final double Minimo_aceptable = 11.16;
 
 	/**
 	 * Launch the application.
